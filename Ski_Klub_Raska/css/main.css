@@ -1,0 +1,619 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1 {
+	color:#FFF;
+}
+p {
+	color:#a9b4bd;
+}
+/* stil za pozadinu stranice */
+#main {
+	background:url(../images/main_background.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+/* stil za header */
+#header {
+	height:131px;
+	background-color:rgba(0,0,0,0.3);
+	-moz-opacity:25%;
+	-webkit-opacity:25%;
+	-o-opacity:25%;
+	opacity:25%;
+}
+#wrap_header {
+	margin: 0 auto;
+	width: 1000px;
+	position:relative;
+}
+#logo {
+	float:left;
+	width:200px;
+	position:absolute;
+	padding-top:20px;
+	cursor:pointer;
+}
+#header_first {
+	width: 670px;
+	height: 40px;
+	float: right;
+	padding-top:50px;
+}
+#header_last {
+	width: 670px;
+	height: 42px;
+	float: right;
+}
+/* stilovi za deo hedera u kome su linkovi za drustvene mreze, polje za pretragu, home & kontakt linkovi */
+.search_btn {
+	float:right;
+	margin-left:3px;
+	margin-top:3px;
+	cursor:pointer;
+}
+.facebook_header {
+	padding: 4px;
+	margin-right:5px;
+	float: right;
+	cursor:pointer;
+}
+.twitter_header {
+	padding: 4px;
+	float: right;
+	cursor:pointer;
+}
+.home_kontakt_header {
+	color: #FFF;
+	font-family:DIN;
+	font-size:14px;
+	padding: 4px;
+	float: left;
+	cursor: pointer;
+}
+.search {
+	background-color:rgba(255,255,255,0.4);
+	-moz-opacity:45%;
+	-webkit-opacity:45%;
+	-o-opacity:45%;
+	opacity:45%;
+	font-family:Myriad Pro;
+	border:none;
+	float:right;
+	height:20px;
+	-webkit-transform:skew(50deg);
+    -moz-transform:skew(50deg);
+    -ms-transform:skew(50deg);
+    -o-transform:skew(50deg);
+    transform:skew(50deg);
+}
+/* stil za deo hedera u kome se nalazi navigacija sajta */
+#nav_main {
+	float:right;
+	text-align:center;
+	height:40px;
+	width:1000px;
+}
+#nav,
+#nav ul {
+     margin:0;
+     padding:0;
+     list-style-type:none;
+     list-style-position:outside;
+     position:relative;
+     line-height:1.5em;
+}
+
+#nav a:link,
+#nav a:active,
+#nav a:visited {
+    display:block;
+	margin-left:3px;
+    color:#fff;
+    text-decoration:none;
+	background-color:rgba(255,255,255,0.2);
+	-moz-opacity:25%;
+	-webkit-opacity:25%;
+	-o-opacity:25%;
+	opacity:25%;
+	font-family:BreuerText;
+	font-size:16px;
+	text-transform:uppercase;
+}
+
+#nav a:hover {
+    color:#0b3352;
+	background-color:rgba(255,255,255,0.6);
+	-moz-opacity:60%;
+	-webkit-opacity:60%;
+	-o-opacity:60%;
+	opacity:60%;
+}
+
+#nav > li {
+    float:right;
+    position:relative;
+}
+
+li.rhombus {
+    float:left;
+    position: relative;
+    -webkit-transform-origin:0 0;
+    -moz-transform-origin:0 0;
+    -ms-transform-origin:0 0;
+    -o-transform-origin:0 0;
+    transform-origin:0 0;
+    -webkit-transform:skew(50deg);
+    -moz-transform:skew(50deg);
+    -ms-transform:skew(50deg);
+    -o-transform:skew(50deg);
+    transform:skew(50deg);
+}
+
+li.rhombus > a span {
+    -webkit-transform:skew(-50deg);
+    -moz-transform:skew(-50deg);
+    -ms-transform:skew(-50deg);
+    -o-transform:skew(-50deg);
+    transform:skew(-50deg);
+    display:block;
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:7px;
+	padding-bottom:7px;
+}
+
+li.rhombus > ul {
+    -webkit-transform-origin:0 0;
+    -moz-transform-origin:0 0;
+    -ms-transform-origin:0 0;
+    -o-transform-origin:0 0;
+    transform-origin:0 0;
+    -webkit-transform:skew(-50deg);
+    -moz-transform:translate(0,1px) skew(-50deg);
+    -ms-transform:skew(-50deg);
+    -o-transform:skew(-50deg);
+    transform:skew(-50deg);
+}
+
+#nav ul {
+    position:absolute;
+    top:1.5em;
+    left:0;
+    width:12em;
+    display:none;
+}
+
+#nav li ul a {
+    width:12em;
+    float:left;
+}
+
+#nav ul ul {
+    top:auto;
+}
+
+#nav li ul ul {
+    left:12em;
+    margin:0px 0 0 10px;
+}
+
+#nav li:hover ul ul,
+#nav li:hover ul ul ul,
+#nav li:hover ul ul ul ul {
+    display:none;
+}
+
+#nav li:hover ul,
+#nav li li:hover ul,
+#nav li li li:hover ul,
+#nav li li li li:hover ul {
+    display:block;
+}
+/* stil za sekciju sa aktuelnostima */
+#aktuelno {
+	background-image:url(../images/aktuelno_01.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-width: 100%;
+	background-height: 100%;
+	height:389px;
+	position:relative;
+}
+#novosti {
+	background-color:rgba(0,0,0,0.3);
+	-moz-opacity:25%;
+	-webkit-opacity:25%;
+	-o-opacity:25%;
+	opacity:25%;
+	padding:10px 0 10px 0;
+	width:100%;
+	position:absolute;
+	bottom:0px;
+}
+.novosti_wrap {
+	width:1000px;
+	margin:0 auto;
+	text-align:left;
+}
+.novosti_naslov {
+	font-size: 25px;
+	font-family:BreuerText;
+	color: #FFFFFF;
+}
+.novosti_tekst {
+	font-size: 12px;
+	font-family: Arial;
+	color: #FFFFFF;
+	margin-top: 5px;
+}
+.novosti_tekst2 {
+	font-size: 12px;
+	font-family: Arial;
+	color: #FFFFFF;
+	display: inline;
+}
+.novosti_procitaj {
+	text-transform: uppercase;
+	font-size: 15px;
+	font-family:BreuerText;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+#pozadina_dole {
+	background-image:url(../images/pozadina_dole.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-width: 100%;
+	background-height: 100%;
+}
+/* stil za sekciju "Dobrodosli" */
+#welcome_tim_wrap {
+	background:url(../images/welcome_tim_bg.jpg);
+	margin:0 auto;
+	width:1000px;
+}
+#welcome {
+	height:240px;
+}
+#welcome_left {
+	float: left;
+	width: 650px;
+}
+.welcome_naslov {
+	font-size: 25px;
+	font-weight: bold;
+	font-family:BreuerText;
+	color: #44525f;
+	padding-top: 20px;
+	padding-left: 15px;
+}
+.welcome_podnaslov {
+	font-size: 25px;
+	font-family:BreuerText;
+	color: #44525f;
+	padding-left: 15px;
+}
+.welcome_tekst {
+	font-size: 12px;
+	font-family: Arial;
+	color: #44525f;
+	margin-top: 5px;
+	padding-top: 10px;
+	padding-left: 15px;
+}
+.welcome_tekst2 {
+	font-size: 12px;
+	font-family: Arial;
+	color: #44525f;
+	margin-top: 5px;
+	padding-left: 15px;
+}
+.welcome_procitaj {
+	text-transform: uppercase;
+	font-size: 15px;
+	font-family:BreuerText;
+	color: #44525f;
+	cursor: pointer;
+	padding-left: 15px;
+}
+/* stil sekcije "Dobrodosli" u kome se nalaze informacije o tekucoj sezoni */
+#welcome_right {
+	float: right;
+	margin-top: 10px;
+	width: 300px;
+}
+.sezona_naslov {
+	font-size: 25px;
+	font-family:BreuerText;
+	color: #44525f;
+	padding-top: 20px;
+}
+.sezona_wrap1 {
+	margin-top: 10px;
+	display: block;
+}
+.sezona_wrap2 {
+	display: block;
+	margin-top: 20px;
+}
+.sezona_tekst1 {
+	font-size: 15px;
+	font-family:BreuerText;
+	color: #44525f;
+	text-transform: uppercase;
+	float: left;
+	margin-left: 10px;
+}
+.sezona_tekst2 {
+	font-size: 12px;
+	font-family: Arial;
+	color: #44525f;
+	width: 160px;
+}
+/* stil za sekciju "Nas tim" */
+#team {
+	height:463px;
+}
+#team_header {
+	background-color: #313f4c;
+	height: 47px;
+}
+.team_header_left {
+	float:left;
+}
+.team_header_right {
+	float:right;
+	margin-top:4px;
+	margin-right:50px;
+}
+.team_naslov {
+	color: #FFFFFF;
+	text-align: left;
+	text-transform: uppercase;
+	padding: 10px;
+	font-size: 25px;
+	font-family:BreuerText
+}
+/* tim navigacija */
+#tim_nav,
+#tim_nav ul {
+     margin:0;
+     padding:0;
+     list-style-type:none;
+     list-style-position:outside;
+     position:relative;
+     line-height:1.5em;
+}
+#tim_nav a:link,
+#tim_nav a:active,
+#tim_nav a:visited {
+    display:block;
+	margin-left:3px;
+    color:#fff;
+    text-decoration:none;
+	background-color:#ee1a23;
+	font-family:BreuerText;
+	font-size:20px;
+	padding:0 10px 0 10px;
+}
+#tim_nav .tim_link1:link,
+#tim_nav .tim_link1:active,
+#tim_nav .tim_link1:visited {
+    display:block;
+	margin-left:3px;
+    color:#fff;
+    text-decoration:none;
+	background-color:#0056a1;
+	font-family:BreuerText;
+	font-size:20px;
+	padding:0 10px 0 10px;
+}
+#tim_nav > li {
+    float:right;
+    position:relative;
+}
+li.tim_list {
+    float:left;
+    position: relative;
+    -webkit-transform-origin:0 0;
+    -moz-transform-origin:0 0;
+    -ms-transform-origin:0 0;
+    -o-transform-origin:0 0;
+    transform-origin:0 0;
+    -webkit-transform:skew(50deg);
+    -moz-transform:skew(50deg);
+    -ms-transform:skew(50deg);
+    -o-transform:skew(50deg);
+    transform:skew(50deg);
+}
+li.tim_list > a span {
+    -webkit-transform:skew(-50deg);
+    -moz-transform:skew(-50deg);
+    -ms-transform:skew(-50deg);
+    -o-transform:skew(-50deg);
+    transform:skew(-50deg);
+    display:block;
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:7px;
+	padding-bottom:7px;
+}
+li.tim_list > ul {
+    -webkit-transform-origin:0 0;
+    -moz-transform-origin:0 0;
+    -ms-transform-origin:0 0;
+    -o-transform-origin:0 0;
+    transform-origin:0 0;
+    -webkit-transform:skew(-50deg);
+    -moz-transform:translate(0,1px) skew(-50deg);
+    -ms-transform:skew(-50deg);
+    -o-transform:skew(-50deg);
+    transform:skew(-50deg);
+}
+#tim_nav ul {
+    position:absolute;
+    top:1.5em;
+    left:0;
+    width:12em;
+    display:none;
+}
+#tim_nav li ul a {
+    width:12em;
+    float:left;
+}
+#tim_nav ul ul {
+    top:auto;
+}
+#tim_nav li ul ul {
+    left:12em;
+    margin:0px 0 0 10px;
+}
+#tim_nav li:hover ul ul,
+#tim_nav li:hover ul ul ul,
+#tim_nav li:hover ul ul ul ul {
+    display:none;
+}
+#tim_nav li:hover ul,
+#tim_nav li li:hover ul,
+#tim_nav li li li:hover ul,
+#tim_nav li li li li:hover ul {
+    display:block;
+}
+#team_content {
+	height:419px;
+	width:1000px;
+	float:left;
+}
+/* stil bloka u kome se nalazi spisak trenera */
+#team_content_left {
+	margin-left:5px;
+	width:255px;
+	float:left;
+}
+.treneri_img {
+	float:left;
+}
+.treneri_name {
+	margin-top:10px;
+	margin-left:5px;
+	font-family:BreuerText;
+	font-size:25px;
+	float:left;
+}
+.treneri_more {
+	font-size:12px;
+	font-family:Arial;
+	text-decoration:underline;
+	margin-left:5px;
+	margin-top:5px;
+	float:left;
+}
+.tim {
+	text-decoration:none;
+	color:#44525f;
+}
+.tim_div {
+	height:90px;
+	margin-top:5px;
+}
+.tim_div:hover {
+	background-color:rgba(0,0,0,0.4);
+	-moz-opacity:25%;
+	-webkit-opacity:25%;
+	-o-opacity:25%;
+	opacity:25%;
+	cursor:pointer;
+}
+.tim_div:hover > .tim > .treneri_name {
+	color:#FFFFFF;
+}
+#team_content_right {
+	width:740px;
+	float:left;
+}
+/* stil za footer stranice */
+#footer {
+	background-color:rgba(0,0,0,0.6);
+	-moz-opacity:70%;
+	-webkit-opacity:70%;
+	-o-opacity:70%;
+	opacity:70%;
+	height:170px;
+}
+#wrap_footer {
+	margin:0 auto;
+	width:1000px;
+}
+#logo_footer {
+	margin-top:25px;
+	float: left;
+}
+/* stil za deo footera u kome je navigacija sajta */
+#footer_nav {
+	margin-top:10px;
+	float: left;
+}
+.footer_nav_main_pages {
+	font-family:BreuerText;
+	font-size:20px;
+}
+.footer_nav_pages_first_row {
+	font-size:12px;
+	font-family:Arial;
+	margin-top:17px;
+	color:#A9B4BD;
+}
+.footer_nav_pages {
+	font-size:12px;
+	font-family:Arial;
+	margin-top:10px;
+	color:#A9B4BD;
+}
+.footer_nav_pages_last {
+	font-size:12px;
+	font-family:Arial;
+	color:#A9B4BD;
+}
+.foot_pages1 {
+	float: left;
+	padding: 10px;
+	margin-left:15px;
+}
+.foot_pages2 {
+	float: left;
+	padding: 10px;
+	margin-left:15px;
+}
+.footer_menu_underline {
+	background-color:#878f94;
+	width:auto;
+	height:5px;
+	-webkit-transform:skew(50deg);
+    -moz-transform:skew(50deg);
+    -ms-transform:skew(50deg);
+    -o-transform:skew(50deg);
+    transform:skew(50deg);
+}
+/* stil za deo footera u kome se nalazi prijava za newsletter */
+.newsletter {
+	background-color:#A9B4BD;
+	border:none;
+	font-family:Myriad Pro;
+	height:23px;
+	width:200px;
+	margin-right:-15px;
+	margin-left:18px;
+	-webkit-transform:skew(55deg);
+    -moz-transform:skew(55deg);
+    -ms-transform:skew(55deg);
+    -o-transform:skew(55deg);
+    transform:skew(55deg);
+	float:right;
+}
+.newsletter_btn {
+	float:right;
+	cursor:pointer;
+}
