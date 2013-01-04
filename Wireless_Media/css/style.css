@@ -1,0 +1,503 @@
+@charset "utf-8";
+/* CSS Document */
+
+/***** CONTAINER STRANICE *****/
+#container {
+background:#545454;
+margin:0 auto;
+min-width:800px;
+}
+
+	/***** HEADER STRANICE *****/
+	#header {
+	height:60px;
+	background:url(../images/header_bg.png) repeat-x; /* pozivanje slike za pozadinu hedera */
+	border-bottom:1px solid #606060;
+	}
+		#header .left {
+		padding:16px 0 0 9px;
+		float:left; /* pozicioniranje sadrzaja koji treba da bude na levoj strani hedera */
+		}
+			#header .title { /* naslov u hederu */
+			font-family:"Agency FB";
+			font-size:19px;
+			color:#FFF;
+			}
+			#header .subheading { /*podnaslov u hederu */
+			font-family:"Agency FB";
+			font-size:10px;
+			letter-spacing:3px;
+			color:#757575;
+			margin-top:3px;
+			}
+		#header .right {
+		padding:22px 15px 0 0;
+		float:right; /* pozicioniranje sadrzaja koji treba da bude na desnoj strani hedera */
+		}
+			#header .hello {
+			font-family:Arial, Helvetica, sans-serif;
+			font-size:14px;
+			color:#bbbbbb;
+			display:inline; /* pozicioniranje teksta da ne bude jedno ispod drugog vec u istoj liniji */
+			}
+			#header .user {
+			font-family:Arial, Helvetica, sans-serif;
+			font-size:14px;
+			color:#FFF;
+			border-right:0.1em solid #535354;
+			padding-right:15px;
+			display:inline; /* pozicioniranje teksta da ne bude jedno ispod drugog vec u istoj liniji */
+			}
+			#header img {
+			padding-left:5px;
+			}
+			#header .logout {
+			font-family:Arial, Helvetica, sans-serif;
+			font-size:0.95em;
+    		padding-left:3px;
+			text-decoration:none;
+			color:#00baff;
+			display:inline; /* pozicioniranje teksta da ne bude jedno ispod drugog vec u istoj liniji */
+			}
+			
+	/***** CONTROL BAR *****/	
+	#controlBar {
+	height:40px;
+	background: -moz-linear-gradient(top, #353537, #2E2E2E); /* dodeljivanje gradienta pozadini (firefox) */
+	background: -webkit-gradient(linear, left top, left bottom, from(#353537), to(#2E2E2E)); /* dodeljivanje gradienta pozadini (chrome) */
+	background: -o-linear-gradient(top, #353537, #2E2E2E); /* dodeljivanje gradienta pozadini (opera) */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#353537', endColorstr='#2E2E2E'); /* dodeljivanje gradienta pozadini (IE) */
+	border-bottom:1px solid #000;
+	border-top:1px solid #000;
+	}
+		#controlBar .left {
+		float:left; /* pozicioniranje sadrzaja koji treba da bude na levoj strani Control Bar-a */
+		}
+			#controlBar .left .empty {
+			width:250px;
+			height:40px;
+			border-right:1px solid #0b0b0c;
+			float:left;
+			}
+			#controlBar .btnLeft { /* klasa za dugmad na levoj strani Control Bar-a */
+			font-family:Candara;
+			font-size:12px;
+			color:#00baff;
+			padding:3px 16px 3px 16px;
+			margin:6px 0 5px 10px;
+			background:#333333;
+			-moz-border-radius:4px;
+			-webkit-border-radius:4px;
+			-o-border-radius:4px;
+			border-radius:4px;
+			border-top:1px solid #6e6e6e;
+			border-bottom:2px solid #0c0c0c;
+			border-left:1px solid #252525;
+			border-right:1px solid #252525;
+			cursor:pointer;
+			}
+		#controlBar .right {
+		float:right; /* pozicioniranje sadrzaja koji treba da bude na desnoj strani Control Bar-a */
+		}
+			/*** drop down lista ***/
+			#sample {
+			font-family:Candara;
+			font-weight:bold;
+			font-size:14px;
+			background:#333333;
+			color:#00BAFF;
+			margin-top:4px;
+			-moz-border-radius:5px;
+			-webkit-border-radius:5px;
+			-o-border-radius:5px;
+			border-radius:5px;
+			float:left;
+			}
+			.desc {
+			color:#6b6b6b;
+			}
+			.desc a {
+			color:#0092dd;
+			}    
+			.dropdown dd, .dropdown dt, .dropdown ul {
+			margin:0px;
+			padding:0px;
+			}
+			.dropdown dd {
+			position:relative;
+			}
+			.dropdown a, .dropdown a:visited {
+			color:#05B7FF;
+			text-decoration:none;
+			outline:none;
+			}
+			.dropdown a:hover {
+			color:#76d4fa;
+			}
+			.dropdown dt a:hover {
+			color:#0d93c9;
+			}
+			.dropdown dt a {
+			background:#333333 url(../images/arrow.png) no-repeat scroll right center;
+			display:block;
+    		border-color:#222222 #464648 #747475;
+			-moz-border-radius:6px;
+			-webkit-border-radius:6px;
+			-o-border-radius:6px;
+    		border-radius:6px;
+    		border-style:solid;
+    		border-width:1px;
+			width:180px;
+			height:26px;
+			}
+			.dropdown dt a span {
+			cursor:pointer;
+			display:block;
+			padding:5px;
+			}
+			.dropdown dd ul {
+			background:#333333 none repeat scroll 0 0;
+			-moz-border-radius:5px;
+			-webkit-border-radius:5px;
+			-o-border-radius:5px;
+			border-radius:5px;
+			-moz-box-shadow:0 0 5px #000000 inset;
+			-webkit-box-shadow:0 0 5px #000000 inset;
+    		box-shadow:0 0 5px #000000 inset;
+			color:#C5C0B0;
+			display:none;
+    		left:0px;
+			padding:7px 4px 0 4px;
+			position:absolute;
+			width:auto;
+			min-width:174px;
+			list-style:none;
+			z-index:9999;
+			}
+			.dropdown span.value {
+			display:none;
+			}
+			.dropdown dd ul li a {
+			height:25px;
+			padding:6px 5px 0 5px;
+			border-bottom:1px solid #336782;
+			display:block;
+			}
+			.dropdown dd ul li a:hover {}
+			
+			#controlBar .btnRight { /* prvo dugme na desnoj strani Control Bar-a */
+			font-family:Candara;
+			font-size:12px;
+			color:#00baff;
+			padding:3px 16px 3px 16px;
+			margin:6px 5px 5px 10px;
+			background:#333333;
+			-moz-border-radius:4px;
+			-webkit-border-radius:4px;
+			-o-border-radius:4px;
+			border-radius:4px;
+			border-top:1px solid #6e6e6e;
+			border-bottom:2px solid #0c0c0c;
+			border-left:1px solid #252525;
+			border-right:1px solid #252525;
+			cursor:pointer;
+			}
+			#controlBar .btnHelp { /* Help dugme na desnoj strani Control Bar-a */
+			font-family:Candara;
+			font-size:12px;
+			font-weight:bold;
+			color:#00baff;
+			padding:2px 7px 2px 7px;
+			margin:5px 14px 5px 5px;
+			background:#333333;
+			-moz-border-radius:5px;
+			-webkit-border-radius:5px;
+			-o-border-radius:5px;
+			border-radius:5px;
+			border-top:2px solid #6e6e6e;
+			border-bottom:2px solid #0c0c0c;
+			border-left:1px solid #252525;
+			border-right:1px solid #252525;
+			cursor:pointer;
+			}
+			
+	/***** MAIN CONTENT *****/	
+	#main {
+	height:780px;
+	padding-bottom:30px;
+	}
+		/*** leva strana main content-a ***/
+		#leftSide {
+		height:100%;
+		width:250px;
+		background:#3c3c3c;
+		float:left;
+		}
+			#search { /* search div */
+			padding:8px;
+			}
+				#search .txt { /* search input polje */
+				background-color:#19191b;
+				color:#FFFFFF;
+				width:195px;
+				height:16px;
+				border-top:1px solid #050505;
+				border-left:1px solid #050505;
+				border-right:1px solid #050505;
+				border-bottom:1px solid #4e4e4e;
+				-moz-border-radius:5px;
+				-webkit-border-radius:5px;
+				-o-border-radius:5px;
+				border-radius:5px;
+				padding:4px 28px 4px 4px;
+				float:left;
+				}
+				#search .btn { /* search dugme */
+				background:#00baff url(../images/search.png) no-repeat center;
+				width:24px;
+				height:24px;
+				margin-left:-25px;
+				margin-top:1px;
+				border-top:1px solid #82ddff;
+				border-bottom:1px solid #004d69;
+				border-right:none;
+				border-left:none;
+				-moz-border-radius:0 5px 5px 0;
+				-webkit-border-radius:0 5px 5px 0;
+				-o-border-radius:0 5px 5px 0;
+				border-radius:0 5px 5px 0;
+				cursor:pointer;
+				}
+			#nav { /* div za panel sa stranicama */
+			background-color:#000;
+			float:left;
+			width:100%;
+			}
+				/* lista sa stranicama */
+				#pages {
+				vertical-align:top;
+				list-style-type:none;
+				margin:0px;
+				padding:0px;
+				}
+				#pages li {
+				border: 1px solid #3F3F40;
+				margin: 1px;
+				}
+				#pages li a {
+				background: -moz-linear-gradient(top, #28282A, #212123);
+				background: -webkit-gradient(linear, left top, left bottom, from(#28282A), to(#212123));
+				background: -o-linear-gradient(top, #28282A, #212123);
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#28282A', endColorstr='#212123');
+				color:#fff;
+				padding:9px;
+				display:block;
+				text-decoration:none;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:13px;
+				}
+				#pages li a:hover, #pages li a:active {
+				background:#00BAFF;
+				}
+				#pages li a span {
+				float:right; /* pozicioniranje ikonica na desnu stranu linka */
+				}
+				#pages li a span img {
+				margin-left:5px;
+				display:none; /* ikonice se ne prikazuju dok se ne predje misem preko linka, sto je omoguceno uz pomoc js-a */
+				}
+				#pages li a .newPage {
+				font-size:16px;
+				font-weight:bold;
+				color:#FFF;
+				margin-right:5px;
+				display:inline;
+				}
+		/*** desna strana main content-a ***/
+		#rightSide {
+		min-height:100%;
+		width:auto;
+		background-color:#555555;
+		position:relative;
+		overflow:auto;
+		}
+			#mainContent { /* wrapper div za 'Working Area' i 'Elements Panel' divove */
+			width:835px;
+			height:632px;
+			overflow:auto;
+			}
+				#workingArea, #elementsPanel {
+				margin:15px 0 0 15px;
+				-moz-border-radius:6px;
+				-webkit-border-radius:6px;
+				-o-border-radius:6px;
+				border-radius:6px;
+				box-shadow: -5px -3px 6px #333333;
+				float:left;
+				}
+				#workingArea .title, #elementsPanel .title { /* naslovi za 'Working Area' i 'Elements Panel' */
+				color:#000000;
+				background:#00BAFF;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:12px;
+				font-weight:lighter;
+				width:385px;
+				padding:7px;
+				border-top:1px solid black;
+				-moz-border-radius:6px 6px 0 0;
+				-webkit-border-radius:6px 6px 0 0;
+				-o-border-radius:6px 6px 0 0;
+				border-radius:6px 6px 0 0;
+				float:left;
+				}
+				#workingArea .content, #elementsPanel .content { /* sadrzaj za 'Working Area' i 'Elements Panel' */
+				height:575px;
+				background:#1B1C1E;
+				width:385px;
+				padding:7px;
+				-moz-border-radius:6px;
+				-webkit-border-radius:6px;
+				-o-border-radius:6px;
+				border-radius:6px;
+				}
+			#properties { /* 'properties' div koji se nalazi ispod 'mainContent-a' */
+			background:#1B1C1E;
+			position:fixed; /* fiksirana pozicija diva kako bi uvek bio vidljiv */
+			bottom:30px; /* pomeren za visinu futera od dna strane na gore kako bi futer bio vidljiv ispod ovog diva */
+			width:100%;
+			height:145px;
+			-moz-border-radius:6px 0 0 0;
+			-webkit-border-radius:6px 0 0 0;
+			-o-border-radius:6px 0 0 0;
+			border-radius:6px 0 0 0;
+			}
+				#properties .title { /* naslov za div 'properties' */
+				color:#000000;
+				background:#00BAFF;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:12px;
+				font-weight:lighter;
+				padding:7px;
+				width:100%;
+				border-top:1px solid black;
+				border-left:1px solid black;
+				-moz-border-radius:6px 0 0 0;
+				-webkit-border-radius:6px 0 0 0;
+				-o-border-radius:6px 0 0 0;
+				border-radius:6px 0 0 0;
+				}
+				#properties .content { /* wrapper celokupnog sadrzaja za div 'properties' */
+				height:122px;
+				background:#1B1C1E;
+				border-top:2px solid #3d3d3e;
+				padding-top:5px;
+				overflow:auto;
+				}
+				#properties .content .first { /* wrapper sadrzaja koji se nalazi na levoj strani u divu 'properties' */
+				float:left;
+				}
+				#properties .content .second { /* wrapper sadrzaja koji se nalazi na desnoj strani u divu 'properties' */
+				margin:5px 0 0 70px;
+    			padding:5px 0 10px 3px;
+				border-left:1px solid #666;
+				float:left;
+				}
+				#properties .content .first .lbl { /* labele u sadrzaju na levoj strani */
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:13px;
+				color:#FFFFFF;
+				margin:5px 5px 5px 9px;
+				}
+				#properties .content .first .txt1 { /* prvi text box na levoj strani */
+				background-color: #353535;
+    			border-top: 1px solid #050505;
+				border-left: 1px solid #050505;;
+				border-right: 1px solid #050505;
+				border-bottom: 1px solid #4e4e4e;
+				-moz-border-radius:5px;
+				-webkit-border-radius:5px;
+				-o-border-radius:5px;
+    			border-radius:5px;
+   				color: #FFFFFF;
+    			padding: 5px;
+				margin: 5px;
+				}
+				#properties .content .first .txt2 { /* drugi text box na levoj strani */
+				background-color: #353535;
+    			border-top: 1px solid #050505;
+				border-left: 1px solid #050505;;
+				border-right: 1px solid #050505;
+				border-bottom: 1px solid #4e4e4e;
+				-moz-border-radius:5px;
+				-webkit-border-radius:5px;
+				-o-border-radius:5px;
+    			border-radius:5px;
+    			color: #FFFFFF;
+    			padding: 5px;
+				margin: 5px 5px 5px 2px;
+				}
+				#properties .content .first .btn1 { /* OK dugme na levoj strani */
+				font-family:Candara;
+				font-size:12px;
+				color:#00baff;
+				padding:3px;
+				background:#333333;
+				-moz-border-radius:5px;
+				-webkit-border-radius:5px;
+				-o-border-radius:5px;
+				border-radius:5px;
+				border-top:1px solid #6e6e6e;
+				border-bottom:1px solid #0c0c0c;
+				border-left:none;
+				border-right:none;
+				cursor:pointer;
+				}
+				#properties .content .first .btn2 { /* drugo dugme na levoj strani */
+				font-family:Candara;
+				font-size:12px;
+				color:#00baff;
+				padding:3px 16px 3px 16px;
+				margin-left: 5px;
+				background:#333333;
+				-moz-border-radius:4px;
+				-webkit-border-radius:4px;
+				-o-border-radius:4px;
+				border-radius:4px;
+				border-top:1px solid #6e6e6e;
+				border-bottom:1px solid #0c0c0c;
+				border-left:none;
+				border-right:none;
+				cursor:pointer;
+				}
+				#properties .content .second img {
+				margin-left:15px; /* pomeranje error ikonice za 15px u desno */
+				}
+				#properties .content .second .error { /* naslov error teksta na desnoj strani */
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:13px;
+				font-weight:bold;
+				color:#b01818;
+				margin-left:3px;
+				display:inline;
+				}
+				#properties .content .second .errorText { /* tekst error teksta na desnoj strani */
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:13px;
+				color:#fff;
+				line-height:17px;
+				margin:6px 0 0 15px;
+				width:296px;
+				}
+				
+/***** FOOTER STRANICE *****/
+#footer {
+	height:30px;
+	width:100%;
+	background: -moz-linear-gradient(top, #353537, #414143);
+	background: -webkit-gradient(linear, left top, left bottom, from(#353537), to(#414143));
+	background: -o-linear-gradient(top, #353537, #414143);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#353537', endColorstr='#414143');
+	border-top:1px solid black;
+	position:fixed; /* fiksiranje futera tako da se uvek vidi na strani */
+	bottom:0; /* zalepljen za dno strane */
+}

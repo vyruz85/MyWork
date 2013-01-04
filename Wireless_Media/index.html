@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css"/><!-- glavni stil stranice -->
+<link rel="stylesheet" type="text/css" href="css/reset.css"/><!-- reset stil stranice -->
+<link rel="shortcut icon" href="images/favicon.ico"/>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript"> // skripta za prikazivanje ikonica na linkovima u trenutku kada se misem predje preko njih
+    jQuery(document).ready(function($){
+                  $('#pages li').bind('mouseenter mouseleave', function(e){
+                     
+                      var show_type = e.type == 'mouseenter' ? 'show' : 'hide';
+                      $(this).find('img')[show_type]();
+                     
+                  }).find('img').click(function(){
+                        alert('Wireless Media');
+                  });   
+    		});
+</script>
+<script type="text/javascript"> // skripta za drop down listu
+        $(document).ready(function() {
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+        });
+</script>
+<title>Wireless Media</title>
+</head>
+
+<body>
+<div id="container"><!-- BOF #container (div u kome se nalaze svi elementi na stranici) -->
+	<div id="header"><!-- BOF #header -->
+    	<span class="left">
+        	<!-- Naslov i podnaslov u hederu -->
+    		<h2 class="title">Lorem Ipsum</h2>
+    		<h5 class="subheading">Lorem ipsum dolor sit amet</h5>
+    	</span>
+        <span class="right">
+        	<!-- Ime korisnika i logout dugme -->
+        	<p class="hello">Hello,</p>
+            <p class="user">Username</p>
+            <img src="images/logout.png" alt="logout" />
+            <a href="#" class="logout">Logout</a>
+        </span>
+    </div><!-- EOF #header -->
+	<div id="controlBar"><!-- BOF #controlBar (div ispod hedera u kome se nalaze dugmad i drop down lista sa opcijama) -->
+    	<span class="left">
+        	<!-- dugmad na levoj strani Control Bar-a -->
+        	<div class="empty"></div>
+    		<input type="button" value="Button" class="btnLeft" />
+        	<input type="button" value="Button" class="btnLeft" />
+        </span>
+        <span class="right">
+        	<!-- dugmad i drop down lista na desnoj strani Control Bar-a -->
+        	<dl id="sample" class="dropdown"><!-- BOF drop down list -->
+        		<dt><a href="#"><span>Select item...</span></a></dt>
+        		<dd>
+            		<ul>
+                		<li><a href="#">Option one</a></li>
+                		<li><a href="#">Option two</a></li>
+                		<li><a href="#">Option three</a></li>
+                		<li><a href="#" style="border:none;">Option four</a></li>
+            		</ul>
+        		</dd>
+    		</dl><!-- EOF drop down list -->
+        	<input type="button" value="Button" class="btnRight" />
+        	<input type="button" value="?" title="Help" class="btnHelp" />
+        </span>
+    </div><!-- EOF #controlBar -->
+	<div id="main"><!-- BOF #main (u ovom divu se nalaze svi paneli potrebni za rad na stranici -->
+    	<div id="leftSide"><!-- BOF #leftSide (u ovom divu se nalazi 'Search' polje i panel sa stranicama) -->
+        	<div id="search"><!-- polje za pretragu -->
+        	<input type="text" class="txt" value="Search" />
+            <input type="button" class="btn" title="Search" />
+            </div>
+            <div id="nav"><!--BOF #nav (div u kome je panel sa stranicama) -->
+            	<ul id="pages"><!-- lista u kojoj su stranice -->
+                	<li><a href="#">Home page
+                    	<span>
+                        	<!-- ikonice za dupliranje, brisanje i editovanje stranica -->
+                        	<img src="images/duplicate.png" title="Duplicate" alt="Duplicate" />
+                        	<img src="images/delete.png" title="Delete" alt="Delete" />
+                        	<img src="images/edit.png" title="Edit" alt="Edit" />
+                        </span></a>
+                    </li>
+                    <li><a href="#">About Us
+                    	<span>
+                    		<img src="images/duplicate.png" title="Duplicate" alt="Duplicate" />
+                        	<img src="images/delete.png" title="Delete" alt="Delete" />
+                        	<img src="images/edit.png" title="Edit" alt="Edit" />
+                        </span></a>
+                    </li>
+                    <li><a href="#">Our Products
+                    	<span>
+                    		<img src="images/duplicate.png" title="Duplicate" alt="Duplicate" />
+                        	<img src="images/delete.png" title="Delete" alt="Delete" />
+                        	<img src="images/edit.png" title="Edit" alt="Edit" />
+                        </span></a>
+                    </li>
+                    <li><a href="#">Brands
+                    	<span>
+                    		<img src="images/duplicate.png" title="Duplicate" alt="Duplicate" />
+                        	<img src="images/delete.png" title="Delete" alt="Delete" />
+                        	<img src="images/edit.png" title="Edit" alt="Edit" />
+                        </span></a>
+                    </li>
+                    <li><a href="#">Gallery
+                    	<span>
+                    		<img src="images/duplicate.png" title="Duplicate" alt="Duplicate" />
+                        	<img src="images/delete.png" title="Delete" alt="Delete" />
+                        	<img src="images/edit.png" title="Edit" alt="Edit" />
+                        </span></a>
+                    </li>
+                    <li><a href="#">
+                    	<p class="newPage">+</p>New Page</a>
+                    </li>
+                </ul>
+            </div><!-- EOF #nav -->
+        </div><!-- EOF #leftSide -->
+        <div id="rightSide"><!-- BOF #rightSide (div u kome su 'Working Area', 'Elements Panel' i 'Properties Panel') -->
+        	<div id="mainContent"><!-- BOF #mainContent (div u kome se nalaze 'Working Area' i 'Elements Panel' -->
+            	<div id="workingArea">
+                	<h1 class="title">WORKING AREA</h1>
+                    <div class="content"></div>
+                </div>
+                <div id="elementsPanel">
+                	<h1 class="title">ELEMENTS PANEL</h1>
+                    <div class="content"></div>
+                </div>
+                <div style="clear:both;"></div>
+            </div><!-- EOF #mainContent -->
+        	<div id="properties"><!-- BOF #properties (div u kome je smesten 'Properties Panel') -->
+            	<h1 class="title">PROPERTIES PANEL</h1>
+                <div class="content"><!-- BOF #content (div koji je wrapper za sadrzaj u 'Properties Panel-u') -->
+                	<span class="first"><!-- sadrzaj koji se nalazi na levoj strani 'Properties Panel-a' (input polja i dugmad) -->
+                		<label class="lbl">Type text:</label>
+                    	<input type="text" class="txt1" />
+                    	<input type="button" value="OK" class="btn1" />
+                    	<input type="button" value="Button" class="btn2" /><br/>
+                    	<label class="lbl">Text color:</label>
+                    	<input type="text" class="txt2" />
+                    </span>
+                    <span class="second"><!-- sadrzaj koji se nalazi na desnoj strani 'Properties Panel-a' (error, info...) -->
+                    	<img src="images/error.png" alt="error" />
+                    	<p class="error">Errors</p>
+                    	<p class="errorText">Orphan page: Page that still exist in the application but that isn’t linked to by any other page in the application.</p>
+                    </span>
+                </div><!-- EOF #content -->
+            </div><!-- EOF #properties -->
+		</div><!-- EOF #rightSide -->
+    </div><!-- EOF #main -->
+    <!-- footer stranice -->
+	<div id="footer"></div>
+</div><!-- EOF #container -->
+</body>
+</html>
